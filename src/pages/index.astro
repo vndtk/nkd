@@ -1,50 +1,101 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import { Image } from "astro:assets";
+import logoImage from "../content/1.jpg";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <main>
+            <Image
+                src={logoImage}
+                alt="$NKD logo. extremely memable."
+                width="100"
+            />
+            <h1>NAKED MAN ($NKD)</h1>
+            <a
+                href="https://explorer.solana.com/address/6WodEFtgTkC7uizNF4E46TY6xx3YKPTgjzXz8TSdEb9S"
+                target="_blank">6WodEFtgTkC7uizNF4E46TY6xx3YKPTgjzXz8TSdEb9S</a
+            >
+
+            <div class="whitepaper">
+                <p>
+                    <strong
+                        >A Peer-to-Peer System for Expressing Fucks on Solana</strong
+                    >
+                </p>
+
+                <h2>Abstract</h2>
+                <p>
+                    I propose a purely peer-to-peer version of fucks given to
+                    politicians or anything related to political theater.
+                </p>
+                <p>
+                    They can be good fucks.<br />
+                    They can also be bad fucks.<br />
+                    The point is — it’s a Solana-based fuck.
+                </p>
+                <p>
+                    The system uses a fixed-supply fungible token, $NKD, with
+                    zero decimals and no central authority.
+                </p>
+                <p>
+                    It cannot be divided.<br />
+                    It cannot be altered.<br />
+                    It simply exists — like the lies, naked and ignored.
+                </p>
+                <p>
+                    Each unit of $NKD is one unfiltered observation of the
+                    absurd.<br />
+                    One fuck given, in public, on-chain.
+                </p>
+
+                <h2>Token Specification</h2>
+                <table>
+                    <tr><td><strong>Name</strong></td><td>NAKED MAN</td></tr>
+                    <tr><td><strong>Symbol</strong></td><td>$NKD</td></tr>
+                    <tr><td><strong>Chain</strong></td><td>Solana</td></tr>
+                    <tr><td><strong>Decimals</strong></td><td>0</td></tr>
+                    <tr
+                        ><td><strong>Total Supply</strong></td><td
+                            >77,302,580</td
+                        ></tr
+                    >
+                    <tr
+                        ><td><strong>Mint Authority</strong></td><td>Revoked</td
+                        ></tr
+                    >
+                    <tr
+                        ><td><strong>Freeze Authority</strong></td><td
+                            >Disabled</td
+                        ></tr
+                    >
+                    <tr
+                        ><td><strong>Initial Liquidity</strong></td><td
+                            >Community-Sourced</td
+                        ></tr
+                    >
+                </table>
+                <p>
+                    No additional minting is possible.<br />
+                    The token cannot be frozen or modified.<br />
+                    There is no roadmap, or is there?
+                </p>
+
+                <h2>Expression Layer</h2>
+                <p>
+                    People can express any emotion or statement with $NKD, and
+                    they will be heard.
+                </p>
+            </div>
+        </main>
+        <Footer />
+    </body>
 </html>
